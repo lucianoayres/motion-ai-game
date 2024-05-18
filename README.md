@@ -2,6 +2,8 @@
 
 This web game utilizes machine learning models for pose estimation and action recognition, providing real-time feedback based on detected poses.
 
+![Motion Game Screenshot](file:///home/luciano/Pictures/Screenshots/Screenshot%20from%202024-05-17%2022-27-35.png)
+
 ## Overview
 
 The application integrates the following functionalities:
