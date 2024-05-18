@@ -1,0 +1,256 @@
+
+.container {
+  background-color: rgb(14, 75, 75);
+}
+
+.content-wrapper {
+    display: flex;
+    gap: 0.6rem;
+}
+
+canvas {
+  position: relative; 
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(252, 252, 252, 0.8);
+  z-index: 1;
+}
+
+.glowingAnimation {
+  animation: glow 2s infinite;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.9), 0 0 30px rgba(255, 255, 255, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+}
+
+#label-container {
+  display: none;
+}
+
+.window-wrapper {
+    position: relative; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.8rem;
+    width: 100%;
+    height: 948px;
+    background-color: rgb(30, 150, 150);
+    border: 1px solid "ghostwhite";
+    border-radius: 1.2rem;
+}
+
+.top-grid {
+  display: flex;
+}
+
+.middle-grid {
+  display: flex;
+  gap: 0.8rem;;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottom-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blueColor {
+  background-color: #007bff; 
+}
+
+.redColor {
+  background-color: #ff3300; 
+}
+
+.yellowColor {
+  background-color: #d0ff00; 
+}
+
+.greenColor {
+  background-color: #15ff00; 
+}
+
+.circle {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%; 
+}
+
+.animateChangeColor {
+  animation: changeColor 2s forwards;
+}
+
+@keyframes changeColor {
+  0% {
+    background-color: #ff6347; 
+  }
+  20% {
+    background-color: #ffd700; 
+  }
+  40% {
+    background-color: #ff00ff; 
+  }
+  60% {
+    background-color: #00ffff; 
+  }
+  80% {
+    background-color: #ff8c00; 
+  }
+  100% {
+    background-color: #00ff00; 
+  }
+}
+
+.animateRollToRight {
+  animation: rollToRight 2s forwards, changeColor 5s infinite;
+}
+
+@keyframes rollToRight {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(calc(100% + 260px)); 
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animateRollToLeft {
+  animation: rollToLeft 2s forwards, changeColor 5s infinite;
+}
+
+@keyframes rollToLeft {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(calc(-100% - 260px)); 
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animateInflate {
+  animation: inflate 1s ease-in-out;
+}
+
+@keyframes inflate {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1); 
+  }
+}
+
+.animateDeflate {
+  animation: deflate 1s ease-in-out;
+}
+
+@keyframes deflate {
+  0% {
+    transform: scale(1); 
+  }
+  50% {
+    transform: scale(0.2); 
+  }
+  100% {
+    transform: scale(1); 
+  }
+}
+
+.logo {
+  position: absolute; 
+  left: 3.4rem; 
+  top: 0.5rem;
+  font-size: 90px;
+  color: #ff3399;
+  animation: motionAnimation 2s cubic-bezier(0.5, 0, 0.5, 1) infinite alternate, colorChange 2s infinite linear;
+}
+
+.score {
+  left: 4rem; 
+  top: 10rem;
+  font-size: 52px;
+  color: #c9c6c7;
+}
+
+.game-font {
+  position: absolute; 
+  font-family: "Poetsen One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  letter-spacing: 2px;
+}
+
+.score-digit{
+  font-size: 64px;
+  color: #0065b8;
+  animation: motionAnimation 2s cubic-bezier(0.5, 0, 0.5, 1) infinite alternate, colorChange 2s infinite linear;
+}
+
+.action {
+  position: absolute; 
+  right: 10rem; 
+  top: 2rem;
+  font-size: 94px;
+  color: #c9c6c7;
+}
+
+.loading {
+  position: absolute; 
+  left: 44%; 
+  top: 48.5%;
+  font-size: 24px;
+  color: #c9c6c7;
+  z-index: 1;
+}
+
+@keyframes motionAnimation {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(5deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+@keyframes colorChange {
+  0% {
+    color: #ff3399; 
+  }
+  25% {
+    color: #66ffcc; 
+  }
+  50% {
+    color: #ffcc00; 
+  }
+  75% {
+    color: #ff0066; 
+  }
+  100% {
+    color: #ff3399; 
+  }
+}
