@@ -12,7 +12,7 @@ The application integrates the following functionalities:
 
 ## Usage
 
-Play it online or clone the project to run it locally through a live server on a web browser.
+[Play it online](https://lucianoayres.github.io/motion-ai-game/) or clone the project to run it locally through a live server on a web browser.
 Once the application is running, access it through a web browser. The webcam feed will display in real-time, and the application will recognize and respond to different poses and interactions with the 04 colored circles on the screen.
 
 ## Technologies Used
