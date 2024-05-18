@@ -1,0 +1,43 @@
+:root {
+    --main-bg-color: rgb(14, 75, 75);
+    --content-bg-color: rgb(30, 150, 150);
+    --circle-size: 240px;
+    --border-radius: 1rem;
+    --canvas-box-shadow-color: rgba(252, 252, 252, 0.8);
+    --window-border-radius: 1.2rem;
+    --glow-animation-duration: 2s;
+    --font-family: "Poetsen One", sans-serif;
+    --font-color: #c9c6c7;
+    --font-text-shadow-color: rgba(0, 0, 0, 0.5);
+    --score-font-size: 52px;
+    --action-font-size: 94px;
+    --logo-font-size: 90px;
+    --score-digit-font-size: 64px;
+    --loading-font-size: 24px;
+    --gap-small: 0.6rem;
+    --gap-medium: 0.8rem;
+    --animation-inflate-duration: 1s;
+    --animation-deflate-duration: 1s;
+    --animation-translate-duration: 2s;
+    --animation-color-change-duration: 5s;
+    --animation-easing: cubic-bezier(0.5, 0, 0.5, 1);
+
+    --color-blue: #007bff;
+    --color-red: #ff3300;
+    --color-yellow: #d0ff00;
+    --color-green: #15ff00;
+    --color-pink: #ff3399;
+    --color-tomato: #ff6347;
+    --color-gold: #ffd700;
+    --color-magenta: #ff00ff;
+    --color-cyan: #00ffff;
+    --color-orange: #ff8c00;
+    --color-lime: #00ff00;
+    --color-teal: #66ffcc;
+    --color-yellow-alt: #ffcc00;
+    --color-pink-alt: #ff0066;
+
+    --glow-color1: rgba(255, 255, 255, 0.5);
+    --glow-color2: rgba(255, 255, 255, 0.9);
+    --glow-color3: rgba(255, 255, 255, 0.6);
+}

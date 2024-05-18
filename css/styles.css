@@ -1,257 +1,262 @@
-
 .container {
-  background-color: rgb(14, 75, 75);
+    display: flex;
+    background-color: var(--main-bg-color);
+    height: 98vh;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
 .content-wrapper {
     display: flex;
-    gap: 0.6rem;
+    gap: var(--gap-small);
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
 canvas {
-  position: relative; 
-  border-radius: 1rem;
-  box-shadow: 0 0 10px rgba(252, 252, 252, 0.8);
-  z-index: 2;
+    position: relative;
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 10px var(--canvas-box-shadow-color);
+    z-index: 2;
 }
 
 .glowingAnimation {
-  animation: glow 2s infinite;
+    animation: glow var(--glow-animation-duration) infinite;
 }
 
 @keyframes glow {
-  0% {
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-  }
-  50% {
-    box-shadow: 0 0 40px rgba(255, 255, 255, 0.9), 0 0 30px rgba(255, 255, 255, 0.6);
-  }
-  100% {
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-  }
+    0% {
+        box-shadow: 0 0 10px var(--glow-color1);
+    }
+    50% {
+        box-shadow: 0 0 40px var(--glow-color2), 0 0 30px var(--glow-color3);
+    }
+    100% {
+        box-shadow: 0 0 10px var(--glow-color1);
+    }
 }
 
 #label-container {
-  display: none;
+    display: none;
 }
 
 .window-wrapper {
-    position: relative; 
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 0.8rem;
+    gap: var(--gap-medium);
     width: 100%;
-    height: 948px;
-    background-color: rgb(30, 150, 150);
-    border: 1px solid "ghostwhite";
-    border-radius: 1.2rem;
+    height: 100%;
+    background-color: var(--content-bg-color);
+    border-radius: var(--window-border-radius);
 }
 
-.top-grid {
-  display: flex;
+.top-grid,
+.middle-grid,
+.bottom-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .middle-grid {
-  display: flex;
-  gap: 0.8rem;;
-  justify-content: center;
-  align-items: center;
-}
-
-.bottom-grid {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    gap: var(--gap-medium);
 }
 
 .blueColor {
-  background-color: #007bff; 
+    background-color: var(--color-blue);
 }
 
 .redColor {
-  background-color: #ff3300; 
+    background-color: var(--color-red);
 }
 
 .yellowColor {
-  background-color: #d0ff00; 
+    background-color: var(--color-yellow);
 }
 
 .greenColor {
-  background-color: #15ff00; 
+    background-color: var(--color-green);
 }
 
 .circle {
-  width: 240px;
-  height: 240px;
-  border-radius: 50%; 
-  z-index: 3;
+    width: var(--circle-size);
+    height: var(--circle-size);
+    border-radius: 50%;
+    z-index: 3;
 }
 
 .animateChangeColor {
-  animation: changeColor 2s forwards;
+    animation: changeColor var(--animation-translate-duration) forwards;
 }
 
 @keyframes changeColor {
-  0% {
-    background-color: #ff6347; 
-  }
-  20% {
-    background-color: #ffd700; 
-  }
-  40% {
-    background-color: #ff00ff; 
-  }
-  60% {
-    background-color: #00ffff; 
-  }
-  80% {
-    background-color: #ff8c00; 
-  }
-  100% {
-    background-color: #00ff00; 
-  }
+    0% {
+        background-color: var(--color-tomato);
+    }
+    20% {
+        background-color: var(--color-gold);
+    }
+    40% {
+        background-color: var(--color-magenta);
+    }
+    60% {
+        background-color: var(--color-cyan);
+    }
+    80% {
+        background-color: var(--color-orange);
+    }
+    100% {
+        background-color: var(--color-lime);
+    }
 }
 
 .animateRollToRight {
-  animation: rollToRight 2s forwards, changeColor 5s infinite;
+    animation: rollToRight var(--animation-translate-duration) forwards, changeColor var(--animation-color-change-duration) infinite;
 }
 
 @keyframes rollToRight {
-  0% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(calc(100% + 260px)); 
-  }
-  100% {
-    transform: translateX(0);
-  }
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(calc(100% + 260px));
+    }
+    100% {
+        transform: translateX(0);
+    }
 }
 
 .animateRollToLeft {
-  animation: rollToLeft 2s forwards, changeColor 5s infinite;
+    animation: rollToLeft var(--animation-translate-duration) forwards, changeColor var(--animation-color-change-duration) infinite;
 }
 
 @keyframes rollToLeft {
-  0% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(calc(-100% - 260px)); 
-  }
-  100% {
-    transform: translateX(0);
-  }
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(calc(-100% - 260px));
+    }
+    100% {
+        transform: translateX(0);
+    }
 }
 
 .animateInflate {
-  animation: inflate 1s ease-in-out;
+    animation: inflate var(--animation-inflate-duration) ease-in-out;
 }
 
 @keyframes inflate {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.5);
-  }
-  100% {
-    transform: scale(1); 
-  }
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 .animateDeflate {
-  animation: deflate 1s ease-in-out;
+    animation: deflate var(--animation-deflate-duration) ease-in-out;
 }
 
 @keyframes deflate {
-  0% {
-    transform: scale(1); 
-  }
-  50% {
-    transform: scale(0.2); 
-  }
-  100% {
-    transform: scale(1); 
-  }
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.2);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 .logo {
-  position: absolute; 
-  left: 3.4rem; 
-  top: 0.5rem;
-  font-size: 90px;
-  color: #ff3399;
-  animation: motionAnimation 2s cubic-bezier(0.5, 0, 0.5, 1) infinite alternate, colorChange 2s infinite linear;
+    position: absolute;
+    left: 3.4rem;
+    top: 0.5rem;
+    font-size: var(--logo-font-size);
+    color: var(--color-pink);
+    animation: motionAnimation var(--glow-animation-duration) var(--animation-easing) infinite alternate,
+        colorChange var(--glow-animation-duration) infinite linear;
 }
 
 .score {
-  left: 4rem; 
-  top: 10rem;
-  font-size: 52px;
-  color: #c9c6c7;
+    left: 4rem;
+    top: 10rem;
+    font-size: var(--score-font-size);
+    color: var(--font-color);
 }
 
 .game-font {
-  position: absolute; 
-  font-family: "Poetsen One", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  letter-spacing: 2px;
+    position: absolute;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-style: normal;
+    text-shadow: 2px 2px 4px var(--font-text-shadow-color);
+    letter-spacing: 2px;
 }
 
-.score-digit{
-  font-size: 64px;
-  color: #0065b8;
-  animation: motionAnimation 2s cubic-bezier(0.5, 0, 0.5, 1) infinite alternate, colorChange 2s infinite linear;
+.score-digit {
+    font-size: var(--score-digit-font-size);
+    color: #0065b8;
+    animation: motionAnimation var(--glow-animation-duration) var(--animation-easing) infinite alternate,
+        colorChange var(--glow-animation-duration) infinite linear;
 }
 
 .action {
-  position: absolute; 
-  right: 10rem; 
-  top: 2rem;
-  font-size: 94px;
-  color: #c9c6c7;
+    position: absolute;
+    right: 10rem;
+    top: 2rem;
+    font-size: var(--action-font-size);
+    color: var(--font-color);
 }
 
 .loading {
-  position: absolute; 
-  left: 44%; 
-  top: 48.5%;
-  font-size: 24px;
-  color: #c9c6c7;
-  z-index: 1;
+    position: absolute;
+    left: 44%;
+    top: 48.5%;
+    font-size: var(--loading-font-size);
+    color: var(--font-color);
+    z-index: 1;
 }
 
 @keyframes motionAnimation {
-  0% {
-    transform: translateY(0) rotate(0deg);
-  }
-  50% {
-    transform: translateY(-12px) rotate(5deg);
-  }
-  100% {
-    transform: translateY(0) rotate(0deg);
-  }
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-12px) rotate(5deg);
+    }
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
 }
 
 @keyframes colorChange {
-  0% {
-    color: #ff3399; 
-  }
-  25% {
-    color: #66ffcc; 
-  }
-  50% {
-    color: #ffcc00; 
-  }
-  75% {
-    color: #ff0066; 
-  }
-  100% {
-    color: #ff3399; 
-  }
+    0% {
+        color: var(--color-pink);
+    }
+    25% {
+        color: var(--color-teal);
+    }
+    50% {
+        color: var(--color-yellow-alt);
+    }
+    75% {
+        color: var(--color-pink-alt);
+    }
+    100% {
+        color: var(--color-pink);
+    }
 }

@@ -1,41 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Motion | An Interactive Pose Detector Game Powered by AI</title>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Motion | An Interactive Pose Detector Game Powered by AI</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet" />
 
-    <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/theme.css" />
+        <link rel="stylesheet" href="css/styles.css" />
 
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/pose@0.8/dist/teachablemachine-pose.min.js" defer></script>
-    <script src="js/main-pose.js" defer></script>
-</head>
-<body class="container" onload="init()">
-    <main class="content-wrapper">
-        <section class="window-wrapper">
-            <h1 class="logo game-font">Motion</h1>
-            <h2 class="score game-font">Score <span class="score-digit">0</span></h2>
-            <h2 class="action game-font"></h2>
-            <div class="top-grid">
-                <div class="circle circlet-top redColor glowingAnimation"></div>
-            </div>
-           <div class="middle-grid">
-            <div class="circle circle-left blueColor glowingAnimation"></div>
-            <div class="input-wrapper">
-                <div class="loading game-font">Loading camera...</div>
-                <canvas id="canvas"></canvas>
-            </div>
-            <div class="circle circle-right yellowColor glowingAnimation"></div>
-           </div>
-           <div class="bottom-grid">
-            <div class="circle circle-bottom greenColor glowingAnimation"></div>
-           </div>
-        </section>
-    </main>
-</body>
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/pose@0.8/dist/teachablemachine-pose.min.js" defer></script>
+        <script src="js/main-pose.js" defer></script>
+    </head>
+    <body class="container" onload="init()">
+        <main class="content-wrapper">
+            <section class="window-wrapper">
+                <h1 class="logo game-font">Motion</h1>
+                <h2 class="score game-font">Score <span class="score-digit">0</span></h2>
+                <h2 class="action game-font"></h2>
+                <div class="top-grid">
+                    <div class="circle circlet-top redColor glowingAnimation"></div>
+                </div>
+                <div class="middle-grid">
+                    <div class="circle circle-left blueColor glowingAnimation"></div>
+                    <div class="input-wrapper">
+                        <div class="loading game-font">Loading camera...</div>
+                        <canvas id="canvas"></canvas>
+                    </div>
+                    <div class="circle circle-right yellowColor glowingAnimation"></div>
+                </div>
+                <div class="bottom-grid">
+                    <div class="circle circle-bottom greenColor glowingAnimation"></div>
+                </div>
+            </section>
+        </main>
+    </body>
 </html>
