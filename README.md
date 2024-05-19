@@ -1,6 +1,6 @@
 # Motion: An AI-based Pose Detection and Action Recogniton Game
 
-This web game utilizes machine learning models for pose estimation and action recognition, providing real-time feedback based on detected poses.
+This web game leverages deep learning models for pose estimation and action recognition, delivering real-time feedback based on accurately detected poses.
 
 ![Motion Game Screenshot](https://github.com/lucianoayres/motion-ai-game/assets/20209393/ba36a3f9-f8ff-430d-90ee-50b17e32d758)
 
@@ -8,9 +8,9 @@ This web game utilizes machine learning models for pose estimation and action re
 
 The application integrates the following functionalities:
 
-- **Pose Estimation:** Utilizes the PoseNet model to estimate human poses in real-time.
-- **Action Recognition:** Employs a pre-trained Teachable Machine classification model to recognize specific actions based on the detected poses.
-- **Interactive Feedback:** Provides interactive feedback by triggering animations and updating scores and actions on the user interface.
+-   **Pose Estimation:** Utilizes the PoseNet model to estimate human poses in real-time.
+-   **Action Recognition:** Employs a pre-trained Teachable Machine classification model to recognize specific actions based on the detected poses.
+-   **Interactive Feedback:** Provides interactive feedback by triggering animations and updating scores and actions on the user interface.
 
 ## Usage
 
@@ -19,10 +19,10 @@ Once the application is running, access it through a web browser. The webcam fee
 
 ## Technologies Used
 
-- **HTML, CSS and Javascript**
-- **TensorFlow.js:** Utilized for loading and running the pre-trained machine learning models.
-- **Teachable Machine:** Provides a pre-trained classification model for action recognition.
-- **PoseNet:** Enables real-time human pose estimation from input images or video.
+-   **HTML, CSS and Javascript**
+-   **TensorFlow.js:** Utilized for loading and running the pre-trained machine learning models.
+-   **Teachable Machine:** Provides a pre-trained classification model for action recognition.
+-   **PoseNet:** Enables real-time human pose estimation from input images or video.
 
 ## Contributing
 
@@ -44,4 +44,4 @@ This project was developed by [Luciano Ayres](https://www.linkedin.com/in/lucian
 
 ## Acknowledgments
 
-- Special thanks to the developers of TensorFlow.js, Teachable Machine, and PoseNet for their valuable contributions to the machine learning community.
+-   Special thanks to the developers of TensorFlow.js, Teachable Machine, and PoseNet for their valuable contributions to the machine learning community.
