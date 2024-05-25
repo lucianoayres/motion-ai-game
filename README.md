@@ -2,7 +2,7 @@
 
 This web game leverages deep learning models for pose estimation and action recognition, delivering real-time feedback based on accurately detected poses.
 
-![Motion Game Screenshot](https://github.com/lucianoayres/motion-ai-game/assets/20209393/ba36a3f9-f8ff-430d-90ee-50b17e32d758)
+![Motion Game Screenshot](https://github.com/lucianoayres/motion-ai-game/assets/20209393/57749940-b41a-4fc3-a4df-0ce8774bb279)
 
 ## Overview
 
