@@ -1,6 +1,6 @@
 :root {
-    --main-bg-color: rgb(14, 75, 75);
-    --content-bg-color: rgb(30, 150, 150);
+    --main-bg-color: black;
+    --content-bg-color: #353535;
     --circle-size: 240px;
     --border-radius: 1rem;
     --canvas-box-shadow-color: rgba(252, 252, 252, 0.8);

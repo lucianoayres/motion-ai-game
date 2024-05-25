@@ -20,7 +20,6 @@
 canvas {
     position: relative;
     border-radius: var(--border-radius);
-    box-shadow: 0 0 10px var(--canvas-box-shadow-color);
     z-index: 2;
 }
 
